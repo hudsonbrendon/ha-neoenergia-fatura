@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Neoenergia Cosern (Bill via e-mail)",
+        "description": "Reads the digital bill and solar generation statement Cosern sends by e-mail. Use a Gmail APP PASSWORD (not your normal password). The PDF password is the first 5 digits of the account holder's CPF/CNPJ.",
+        "data": {
+          "username": "E-mail (IMAP)",
+          "password": "E-mail app password",
+          "pdf_password": "PDF password (first 5 digits of CPF)",
+          "imap_host": "IMAP host",
+          "imap_port": "IMAP port",
+          "folder": "Folder"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect/read the mailbox. Check e-mail, app password and PDF password."
+    },
+    "abort": {
+      "already_configured": "This mailbox is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "valor": {
+        "name": "Bill amount"
+      },
+      "vencimento": {
+        "name": "Due date"
+      },
+      "consumo": {
+        "name": "Consumption"
+      },
+      "energia_injetada": {
+        "name": "Injected energy"
+      },
+      "saldo_creditos": {
+        "name": "Credit balance"
+      },
+      "bandeira": {
+        "name": "Tariff flag"
+      },
+      "potencia": {
+        "name": "System power"
+      },
+      "gd_saldo_acumulado": {
+        "name": "Accumulated balance (GD)"
+      },
+      "gd_injetada_mes": {
+        "name": "Injected this month (GD)"
+      },
+      "gd_compensada_mes": {
+        "name": "Compensated this month (GD)"
+      },
+      "gd_total_injetado": {
+        "name": "Total injected (GD)"
+      }
+    }
+  }
+}

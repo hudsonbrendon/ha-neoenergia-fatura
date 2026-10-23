@@ -1,0 +1,12 @@
+{
+  "domain": "neoenergia_fatura",
+  "name": "Neoenergia Cosern (Fatura por e-mail)",
+  "codeowners": ["@hudsonbrendon"],
+  "config_flow": true,
+  "documentation": "https://github.com/hudsonbrendon/ha-neoenergia-fatura",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/hudsonbrendon/ha-neoenergia-fatura/issues",
+  "requirements": ["pypdf>=4.0.0"],
+  "version": "0.1.0"
+}

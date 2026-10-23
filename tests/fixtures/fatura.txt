@@ -1,0 +1,146 @@
+Consumo-TUSD kWh           462,00  0,63946335            295,43             13,48            295,43 20,00             59,08  0,48236000 
+Consumo-TE kWh           462,00  0,38901262            179,72              8,20            179,72 20,00             35,94  0,29344000 
+G2Comp.mUC-nM-TUSD kWh           462,00-  0,42709757            197,31-              9,00-            197,31- 20,00             39,46-  0,32216824 
+G2Comp.mUC-nM-TE kWh           462,00-  0,38901262            179,72-              8,20-            179,72- 20,00             35,94-  0,29344000 
+Acrés. Band. AMARELA              4,32              0,19              4,32 20,00              0,86 
+G2-Acrés.Bd.AM-Comp.              4,32-              0,19-              4,32- 20,00              0,86-
+Ilum. Púb. Municipal             54,25 
+www.neoenergia.com|Ligue grátis 116
+ DANFE - DOCUMENTO AUXILIAR DA NOTA FISCAL DE ENERGIA ELÉTRICA ELETRÔNICA 
+ COMPANHIA ENERGÉTICA DO RIO GRANDE DO NORTE
+ RUA MERMOZ, 150, BALDO, NATAL, RIO GRANDE DO NORTE CEP 00000-000
+ CNPJ 00.000.000/0000-00 INSCRIÇÃO ESTADUAL 00000000-0
+ CLASSIFICAÇÃO: B1 RESIDENCIAL -RESIDENCIAL  TIPO DE FORNECIMENTO: Conv. Monômia - Monofásico
+ NOME DO CLIENTE:
+ FULANO DE TAL
+ CPF: 000.***.***-**    
+ ENDEREÇO:
+ RUA EXEMPLO 00 CS- 00
+ CONDOMINIO EXEMPLO
+ BAIRRO/AREA URBANA
+ 00000-000 CIDADE RN
+NÚMERO DA UNIDADE CONSUMIDORA
+9.999.999.999-99
+ DATAS DE LEITURAS  LEITURA ANTERIOR 18/09/2026  LEITURA ATUAL 20/10/2026  N° DE DIAS  32  PRÓXIMA LEITURA 17/11/2026
+ NOTA FISCAL N° 000000000 - SÉRIE 000 / DATA DE EMISSÃO: 20/10/2026
+ Consulte pela Chave de Acesso em:
+ https://dfe-portal.svrs.rs.gov.br/Nf3e/consulta
+ chave de acesso:
+ 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+ Protocolo de autorização: 0000000000000000 - 20/10/2026 às 10:03:35
+REF:MÊS/ANO
+10/2026
+VENCIMENTO
+23/11/2026
+TOTAL A PAGAR R$
+           152,37 
+Cadastra-se e receba a sua fatura por e-mail, utilizando o QR code no verso da fatura.
+TRIBUTO  BASE DE     ALÍQUOTA    VALOR (R$)
+                 CÁLCULO (R$)      (%)
+ PIS             78,49    1,02              0,80 
+ COFINS             78,49    4,69              3,68 
+ ICMS             98,12   20,00             19,62 
+CONSUMO / kWh
+                                         CONSUMO FATURADO          N°DIAS FAT
+OUT26         462  32
+SET26         298  30
+AGO26         377  30
+JUL26         487  33
+JUN26         420  29
+MAI26         503  32
+ABR26         463  29
+MAR26         382  28
+FEV26         461  30
+JAN26         578  33
+DEZ25         331  31
+NOV25         348  28
+OUT25           0  32
+MEDIDOR GRANDEZAS POSTOS LEITURA LEITURA CONST. CONSUMO
+HORÁRIOS ANTERIOR ATUAL MEDIDOR kWh
+ 0000000000   Energia Ativa            Único         8.336,00  8.798,00     1,00000          462,00   
+ 0000000000  Energia Ativa Injetada   Único         8.970,00  9.501,00     1,00000          531,00   
+RESERVADO AO FISCO
+Até a emissão desta fatura você  não possui débitos para esse código de cliente.Parabéns por manter suas contas em dia! Conte
+sempre com a gente. Este comunicado não contempla débitos em discussão judicial.A  compensação do pagamento ocorrerá em
+até 3 dias úteis, após data do pagamento.
+ Saldo anterior total = 708,0000
+ Energia injetada no mês = 531,0000
+ Energia compensada total = 462,0000
+ Saldo atual total = 777,0000
+ Excedente do mês = 69,0000
+ITAU                PAGÁVEL EM QUALQUER REDE BANCÁRIA
+ 00000.00000   00000.000000   00000.000000   0   00000000000000
+ PAGADOR | CPF/CNPJ | ENDEREÇO
+ FULANO DE TAL 000.***.***-**
+ RUA EXEMPLO 00 CS- 00 CONDOMINIO EXEMPLO BAIRRO/AREA URBANA 00000-000 CIDADE RN
+ NOSSO NÚMERO
+ 000000000000
+ N° DO DOCUMENTO
+ 00000000
+ CÓD. DÉBITO EM CONTA
+ 0000000000
+ DATA DE VENCIMENTO
+ 23/11/2026
+ VALOR DO DOCUMENTO
+            152,37 
+ BENEFICIÁRIO
+ COMPANHIA ENERGÉTICA DO RIO GRANDE DO NORTE          CNPJ 00.000.000/0000-00
+ RUA MERMOZ, 150, BALDO, NATAL, RIO GRANDE DO NORTE CEP 00000-000
+ AGÊNCIA/CODIGO CEDENTE 0000/00000-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+INFORMAÇÕES IMPORTANTES
+Na data da leitura a bandeira em vigor é a Verde. Mais informações  em www.aneel.gov.br.
+Conheça o termo de adesão, direitos e deveres e mais em www.neoenergia.com/rn
+A fatura pode ser emitida com base na leitura informada pelo cliente.
+10/2026  CÓDIGO DÉBITO EM CONTA 0000000000  VENCIMENTO 23/11/2026  TOTAL A PAGAR R$            152,37  PARA CADASTRAR SUA CONTA EM DÉBITO AUTOMÁTICO, UTILIZE O CÓDIGO ACIMA.
+1/1
+PAGUE COM PIX
+TOTAL            152,37 
+ ITENS DA FATURA UNID. QUANT. PREÇO UNIT. VALOR PIS/  BASE CALC. ALÍQUOTA ICMS (R$) TARIFA
+  COM TRIB.(R$) (R$) COFINS(R$)  ICMS(R$)  ICMS(%) UNIT(R$)
+Fale com a gente! | Nossos Canais de Atendimento
+TELEATENDIMENTO: 116 ou 0800 283 0800                                   
+(Ligação gratuita de telefones fixos e móveis)                          
+Atendimento ao deficiente auditivo ou de fala: 0800 701 0155            
+Ouvidoria: 0800 084 0404                                                
+Agência de Regulação dos Serviços Públicos do Rio Grande do             
+Norte - ARSEP 0800 727 0167                                             
+Agência Nacional de Energia Elétrica - ANEEL 167                        
+(Ligação gratuita de telefones fixos e móveis)                          
+INFORMAÇÕES IMPORTANTES
+Todo Consumidor pode solicitar a apuração dos indicadores de
+continuidade e limites aplicáveis (DIC, FIC, DMIC e DICRI). As
+informações podem ser consultadas a qualquer tempo, basta
+acessar:  www.neoenergia.com - Na Agência Virtual.
+DIC - NÚMERO DE HORAS SEM ENERGIA
+FIC - NÚMERO DE VEZES SEM ENERGIA
+DMIC - DURAÇÃO MÁXIMA DE INTERRUPÇÃO CONTÍNUA
+DICRI - DURAÇÃO DE INTERRUPÇÃO EM DIA CRÍTICO
+INFORMAÇÕES IMPORTANTES
+O Cliente é compensado quando há violação na continuidade
+individual ou do nível de tensão de fornecimento.
+Pagamento em atraso gera multa 2%(Res.1.000/ANEEL),
+juros 1% a.m (lei 10.438/02) e atualização monetária no
+próximo mês.
+O cliente é compensado quando há descumprimento do prazo
+definido para  os padrões de atendimento comercial.
+Regras para cobrança da contribuição para custeio de serviço
+de  iluminação pública(COSIP) estão à disposição site
+www.neoenergia.com/Poder Público/Contribuição de
+Iluminação Pública.
+As informações suplementares estão disponíveis no site
+www.neoenergia.com - Na Agência Virtual, ou nas lojas de
+atendimento.
+As condições gerais de fornecimento (Resolução ANEEL 414/2010), tarifas,serviços prestados e tributos se encontram  à
+disposição, para consulta em nossas unidades de atendimento e no site www.neoenergia.com
+ACESSE WWW.NEOENERGIA.COM E CONFIRA NOSSO AVISO DE PRIVACIDADE.
+ DANFE - DOCUMENTO AUXILIAR DA NOTA
+ FISCAL DE ENERGIA ELÉTRICA ELETRÔNICA
+ NOME DO CLIENTE:
+ FULANO DE TAL
+ ENDEREÇO:
+ PX EXEMPLO
+ RUA EXEMPLO 00 CS- 00
+ CONDOMINIO EXEMPLO
+ BAIRRO/AREA URBANA
+ 00000-000 CIDADE RN

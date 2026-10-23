@@ -1,0 +1,80 @@
+Demonstrativo de Faturamento
+Cliente EndereçoFULANO DE TAL RUA EXEMPLO,LIBERDADE
+Período Potência Modalidade.GD Classificação.GDago/2026 5.00 CL GDII
+Resumo de Saldo de Crédito
+Saldo
+Anterior
+Total
+Injetado
+Total
+Compensado
+Saldo
+Acumulado
+Próximo saldo
+acum. a expirar
+Ciclo de Faturam
+a Expirar
+Total de Créd.
+Expirados
+373,00 4.158,00 4.350,00 452,00 45,00 out/2030 0,00
+Dados dos Últimos 13 Meses
+Código do cliente 000000000000
+Situação
+Mensal
+Posto
+Horário
+Saldo
+Anterior
+Crédito Rec. de
+Outra UC Ger
+Energia
+injetada
+Energia
+Consumida
+Energ Exc
+Alocada
+KWH
+Compens
+Energia
+Faturada
+Crédito Transf.
+Outra UC
+Crédito Classifica
+ção GD
+ago/2026 TT 373,00 0,00 456,00 377,00 79,00 377,00 0,00 0,00 452,00 GDII
+jul/2026 TT 450,00 0,00 410,00 487,00 0,00 487,00 0,00 0,00 373,00 GDII
+jun/2026 TT 454,00 0,00 416,00 420,00 0,00 420,00 0,00 0,00 450,00 GDII
+mai/2026 TT 594,00 0,00 363,00 503,00 0,00 503,00 0,00 0,00 454,00 GDII
+abr/2026 TT 666,00 0,00 391,00 463,00 0,00 463,00 0,00 0,00 594,00 GDII
+mar/2026 TT 622,00 0,00 426,00 382,00 44,00 382,00 0,00 0,00 666,00 GDII
+fev/2026 TT 736,00 0,00 347,00 461,00 0,00 461,00 0,00 0,00 622,00 GDII
+jan/2026 TT 928,00 0,00 386,00 578,00 0,00 578,00 0,00 0,00 736,00 GDII
+dez/2025 TT 751,00 0,00 508,00 331,00 177,00 331,00 0,00 0,00 928,00 GDII
+nov/2025 TT 0,00 0,00 455,00 348,00 107,00 348,00 0,00 0,00 751,00 GDII
+Resumo do Saldo de Crédito por Unidade
+Código do Cliente Percentual / Prioridade Saldo Crédito Acumulado Classificação GD
+000000000000 100% 452,00 GDII
+Você sabia?
+1. Energia gerada é toda a energia produzida por meios de fontes renováveis. A energia gerada que é
+consumida de forma simultânea não é registrada na rede da concessionária. Essa é uma informação
+própria da instalação do consumidor e não está disponível para a concessionária. 
+2. Consumo Instantâneo é a energia utilizada instantaneamente pela sua residência. Essa é uma
+informação própria da instalação do consumidor e não está disponível para a concessionária.
+3. Energia Injetada é aquela que não foi usada no consumo instantâneo.Ou seja, seu sistema gerou mais
+energia do que precisava e, assim, injetou energia na rede da concessionária. Essa energia é registrada na
+medição da concessionária.
+4. Energia Consumida é a energia usada pela unidade consumidora proveniente da rede da
+concessionária. Essa energia é registrada na medição da concessionária.
+5. Energia Faturada é a diferença entre a energia consumida e a energia compensada*, ressaltando que o
+valor mínimo a ser faturado será sempre custo de disponibilidade**.
+Energia compensada*  é a energia elétrica ativa consumida da rede, compensada pela ener gia elétrica
+ativa injetada, pelo excedente de energia e pelo crédito de energia utilizados no faturamento de unidade
+consumidora participante do Sistema de Compensação de Energia Elétrica, limitada ao montante de
+energia consumida da rede no ciclo de faturamento e respeitando o limite do valor do custo de
+disponibilidade
+O que é custo de disponibilidade**? É uma referência míni ma de cobrança, definida pela ANEEL. Para
+clientes de baixa tensão é o valor em moeda corrente equivalente a 30 kWh, se monofásico ou bifásico a
+dois condutores, 50 kWh, se bifásico a três condutores ou 100 kWh, se trifásico.
+Crédito acumulado trata-se do saldo positivo de energia após todas as compensações # geradora e
+beneficiárias # que serão utilizadas nas faturas subseqüentes. Os créditos permanecem válidos por 60
+meses, a partir do mês de injeção.

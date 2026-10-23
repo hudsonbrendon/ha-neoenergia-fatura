@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Neoenergia Cosern (Fatura por e-mail)",
+        "description": "Le a fatura digital e o demonstrativo de geracao solar que a Cosern envia por e-mail. Use uma SENHA DE APP do Gmail (nao a senha normal). A senha do PDF sao os 5 primeiros digitos do CPF/CNPJ do titular.",
+        "data": {
+          "username": "E-mail (IMAP)",
+          "password": "Senha de app do e-mail",
+          "pdf_password": "Senha do PDF (5 primeiros digitos do CPF)",
+          "imap_host": "Servidor IMAP",
+          "imap_port": "Porta IMAP",
+          "folder": "Pasta"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nao consegui conectar/ler o e-mail. Confira e-mail, senha de app e a senha do PDF."
+    },
+    "abort": {
+      "already_configured": "Essa conta de e-mail ja esta configurada."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "valor": {
+        "name": "Valor da fatura"
+      },
+      "vencimento": {
+        "name": "Vencimento"
+      },
+      "consumo": {
+        "name": "Consumo"
+      },
+      "energia_injetada": {
+        "name": "Energia injetada"
+      },
+      "saldo_creditos": {
+        "name": "Saldo de creditos"
+      },
+      "bandeira": {
+        "name": "Bandeira tarifaria"
+      },
+      "potencia": {
+        "name": "Potencia da usina"
+      },
+      "gd_saldo_acumulado": {
+        "name": "Saldo acumulado (GD)"
+      },
+      "gd_injetada_mes": {
+        "name": "Energia injetada no mes (GD)"
+      },
+      "gd_compensada_mes": {
+        "name": "Energia compensada no mes (GD)"
+      },
+      "gd_total_injetado": {
+        "name": "Total injetado (GD)"
+      }
+    }
+  }
+}
