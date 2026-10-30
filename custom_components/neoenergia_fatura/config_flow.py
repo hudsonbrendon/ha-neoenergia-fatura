@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
-import voluptuous as vol
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
+import voluptuous as vol
 
 from .const import (
     CONF_FOLDER,
@@ -45,9 +45,7 @@ class NeoenergiaFaturaConfigFlow(ConfigFlow, domain=DOMAIN):
             except MailboxError:
                 errors["base"] = "cannot_connect"
             else:
-                await self.async_set_unique_id(
-                    f"{user_input[CONF_USERNAME]}:{DOMAIN}"
-                )
+                await self.async_set_unique_id(f"{user_input[CONF_USERNAME]}:{DOMAIN}")
                 self._abort_if_unique_id_configured()
                 return self.async_create_entry(
                     title=f"Cosern ({user_input[CONF_USERNAME]})",

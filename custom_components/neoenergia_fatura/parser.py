@@ -7,14 +7,24 @@ do Home Assistant, para ser testavel isoladamente.
 
 from __future__ import annotations
 
-import re
 from datetime import date, datetime
+import re
 from typing import Any
 
 _NUM = r"-?[\d.]+,\d+"
 _MESES = {
-    "jan": 1, "fev": 2, "mar": 3, "abr": 4, "mai": 5, "jun": 6,
-    "jul": 7, "ago": 8, "set": 9, "out": 10, "nov": 11, "dez": 12,
+    "jan": 1,
+    "fev": 2,
+    "mar": 3,
+    "abr": 4,
+    "mai": 5,
+    "jun": 6,
+    "jul": 7,
+    "ago": 8,
+    "set": 9,
+    "out": 10,
+    "nov": 11,
+    "dez": 12,
 }
 
 
@@ -66,9 +76,7 @@ def parse_fatura(text: str) -> dict[str, Any]:
         ),
     }
     # Consumo faturado do mes (primeira linha da tabela CONSUMO / kWh)
-    consumo = _search(
-        r"CONSUMO FATURADO\s+N°DIAS FAT\s*\n\s*\w+\s+(\d+)", text
-    )
+    consumo = _search(r"CONSUMO FATURADO\s+N°DIAS FAT\s*\n\s*\w+\s+(\d+)", text)
     data["consumo_kwh"] = int(consumo) if consumo else None
 
     # Medidor: energia ativa consumida e injetada
@@ -94,9 +102,7 @@ def parse_fatura(text: str) -> dict[str, Any]:
 
     # Historico de consumo (tabela MES CONSUMO N_DIAS)
     historico = []
-    for m in re.finditer(
-        r"\b([A-Z]{3})(\d{2})\s+(\d+)\s+\d+\b", text
-    ):
+    for m in re.finditer(r"\b([A-Z]{3})(\d{2})\s+(\d+)\s+\d+\b", text):
         mes = _MESES.get(m.group(1).lower())
         if mes:
             historico.append(
@@ -111,9 +117,9 @@ def parse_gd(text: str) -> dict[str, Any]:
     data: dict[str, Any] = {
         "periodo": _search(r"Período.*?(\w{3}/\d{4})", text, re.S),
         # No cabecalho da GD a potencia usa ponto decimal (ex "5.00" = 5 kWp).
-        "potencia_kwp": (
-            lambda v: float(v.replace(",", ".")) if v else None
-        )(_search(r"\w{3}/\d{4}\s+(\d+[.,]\d{2})\s+\w+\s+GD", text)),
+        "potencia_kwp": (lambda v: float(v.replace(",", ".")) if v else None)(
+            _search(r"\w{3}/\d{4}\s+(\d+[.,]\d{2})\s+\w+\s+GD", text)
+        ),
     }
     # Linha "Resumo de Saldo de Credito": 7 numeros em sequencia
     resumo = re.search(

@@ -6,9 +6,9 @@ original tem senha e nao fica no repo).
 
 from __future__ import annotations
 
+from datetime import date
 import importlib.util
 import pathlib
-from datetime import date
 
 _P = (
     pathlib.Path(__file__).resolve().parent.parent
