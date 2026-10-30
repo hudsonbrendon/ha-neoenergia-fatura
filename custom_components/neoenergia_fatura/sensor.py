@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from dataclasses import dataclass
-from datetime import date
 from typing import TYPE_CHECKING, Any
 
 from homeassistant.components.sensor import (
@@ -13,18 +12,21 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
     SensorStateClass,
 )
-from homeassistant.const import CURRENCY_REAL, UnitOfEnergy, UnitOfPower
-from homeassistant.helpers.device_info import DeviceInfo
+from homeassistant.const import UnitOfEnergy, UnitOfPower
+from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import DOMAIN
 
 if TYPE_CHECKING:
     from homeassistant.core import HomeAssistant
-    from homeassistant.helpers.entity_platform import AddEntitiesCallback
+    from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
     from .coordinator import NeoenergiaFaturaCoordinator
     from .data import NeoenergiaFaturaConfigEntry
+
+
+PARALLEL_UPDATES = 0
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -41,62 +43,94 @@ def _g(key: str) -> Callable[[dict[str, Any]], Any]:
 
 SENSORS: tuple[NeoDesc, ...] = (
     NeoDesc(
-        key="valor", translation_key="valor", source="fatura",
-        native_unit_of_measurement=CURRENCY_REAL,
-        device_class=SensorDeviceClass.MONETARY, value=_g("valor"),
+        key="valor",
+        translation_key="valor",
+        source="fatura",
+        native_unit_of_measurement="BRL",
+        device_class=SensorDeviceClass.MONETARY,
+        value=_g("valor"),
     ),
     NeoDesc(
-        key="vencimento", translation_key="vencimento", source="fatura",
-        device_class=SensorDeviceClass.DATE, value=_g("vencimento"),
+        key="vencimento",
+        translation_key="vencimento",
+        source="fatura",
+        device_class=SensorDeviceClass.DATE,
+        value=_g("vencimento"),
     ),
     NeoDesc(
-        key="consumo", translation_key="consumo", source="fatura",
+        key="consumo",
+        translation_key="consumo",
+        source="fatura",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        device_class=SensorDeviceClass.ENERGY, state_class=SensorStateClass.TOTAL,
+        device_class=SensorDeviceClass.ENERGY,
+        state_class=SensorStateClass.TOTAL,
         value=_g("consumo_kwh"),
     ),
     NeoDesc(
-        key="energia_injetada", translation_key="energia_injetada", source="fatura",
+        key="energia_injetada",
+        translation_key="energia_injetada",
+        source="fatura",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        device_class=SensorDeviceClass.ENERGY, state_class=SensorStateClass.TOTAL,
+        device_class=SensorDeviceClass.ENERGY,
+        state_class=SensorStateClass.TOTAL,
         value=_g("energia_injetada_kwh"),
     ),
     NeoDesc(
-        key="saldo_creditos", translation_key="saldo_creditos", source="fatura",
+        key="saldo_creditos",
+        translation_key="saldo_creditos",
+        source="fatura",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        state_class=SensorStateClass.MEASUREMENT, value=_g("saldo_creditos_kwh"),
+        state_class=SensorStateClass.MEASUREMENT,
+        value=_g("saldo_creditos_kwh"),
     ),
     NeoDesc(
-        key="bandeira", translation_key="bandeira", source="fatura",
+        key="bandeira",
+        translation_key="bandeira",
+        source="fatura",
         value=_g("bandeira"),
     ),
     # Geracao distribuida (demonstrativo solar)
     NeoDesc(
-        key="potencia", translation_key="potencia", source="gd",
+        key="potencia",
+        translation_key="potencia",
+        source="gd",
         native_unit_of_measurement=UnitOfPower.KILO_WATT,
-        device_class=SensorDeviceClass.POWER, value=_g("potencia_kwp"),
+        device_class=SensorDeviceClass.POWER,
+        value=_g("potencia_kwp"),
     ),
     NeoDesc(
-        key="gd_saldo_acumulado", translation_key="gd_saldo_acumulado", source="gd",
+        key="gd_saldo_acumulado",
+        translation_key="gd_saldo_acumulado",
+        source="gd",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        state_class=SensorStateClass.MEASUREMENT, value=_g("saldo_acumulado_kwh"),
+        state_class=SensorStateClass.MEASUREMENT,
+        value=_g("saldo_acumulado_kwh"),
     ),
     NeoDesc(
-        key="gd_injetada_mes", translation_key="gd_injetada_mes", source="gd",
+        key="gd_injetada_mes",
+        translation_key="gd_injetada_mes",
+        source="gd",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        device_class=SensorDeviceClass.ENERGY, state_class=SensorStateClass.TOTAL,
+        device_class=SensorDeviceClass.ENERGY,
+        state_class=SensorStateClass.TOTAL,
         value=_g("injetada_mes_kwh"),
     ),
     NeoDesc(
-        key="gd_compensada_mes", translation_key="gd_compensada_mes", source="gd",
+        key="gd_compensada_mes",
+        translation_key="gd_compensada_mes",
+        source="gd",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        device_class=SensorDeviceClass.ENERGY, state_class=SensorStateClass.TOTAL,
+        device_class=SensorDeviceClass.ENERGY,
+        state_class=SensorStateClass.TOTAL,
         value=_g("compensada_mes_kwh"),
     ),
     NeoDesc(
-        key="gd_total_injetado", translation_key="gd_total_injetado", source="gd",
+        key="gd_total_injetado",
+        translation_key="gd_total_injetado",
+        source="gd",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        state_class=SensorStateClass.TOTAL_INCREASING, value=_g("total_injetado_kwh"),
+        state_class=SensorStateClass.TOTAL_INCREASING,
+        value=_g("total_injetado_kwh"),
     ),
 )
 
@@ -104,7 +138,7 @@ SENSORS: tuple[NeoDesc, ...] = (
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: NeoenergiaFaturaConfigEntry,
-    async_add_entities: AddEntitiesCallback,
+    async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:
     """Cria os sensores."""
     coordinator = entry.runtime_data.coordinator

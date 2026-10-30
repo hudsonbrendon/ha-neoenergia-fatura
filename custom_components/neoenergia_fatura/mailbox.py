@@ -9,10 +9,10 @@ Roda em executor (imaplib/pypdf sao sincronos). Sem dependencia do Home Assistan
 
 from __future__ import annotations
 
-import email
-import imaplib
 from dataclasses import dataclass
+import email
 from email.header import decode_header
+import imaplib
 from io import BytesIO
 from typing import Any
 
@@ -91,7 +91,7 @@ class CosernMailbox:
         imap = self._connect()
         try:
             imap.logout()
-        except (imaplib.IMAP4.error, OSError):
+        except imaplib.IMAP4.error, OSError:
             pass
 
     def _latest_pdf(self, imap: imaplib.IMAP4_SSL, subject_kw: str) -> PdfResult | None:
@@ -109,8 +109,9 @@ class CosernMailbox:
                 continue
             for part in msg.walk():
                 fname = _decode(part.get_filename())
-                if part.get_content_type() == "application/pdf" or fname.lower().endswith(
-                    ".pdf"
+                if (
+                    part.get_content_type() == "application/pdf"
+                    or fname.lower().endswith(".pdf")
                 ):
                     raw = part.get_payload(decode=True)
                     if not raw:
@@ -136,7 +137,6 @@ class CosernMailbox:
         finally:
             try:
                 imap.logout()
-            except (imaplib.IMAP4.error, OSError):
+            except imaplib.IMAP4.error, OSError:
                 pass
         return {"fatura": fatura, "gd": gd}
-
