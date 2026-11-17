@@ -48,7 +48,7 @@ def _decode(value: str | None) -> str:
 
 def _pdf_text(raw: bytes, password: str) -> str:
     reader = PdfReader(BytesIO(raw))
-    if reader.is_encrypted:
+    if reader.is_encrypted:  # noqa: SIM102
         # pypdf.decrypt retorna 0 (falha), 1 (user pw) ou 2 (owner pw).
         if not reader.decrypt(password):
             msg = "senha do PDF incorreta (confira os 5 primeiros digitos do CPF)"

@@ -109,9 +109,9 @@ def parse_fatura(text: str) -> dict[str, Any]:
 def parse_gd(text: str) -> dict[str, Any]:
     """Extrai o demonstrativo de geracao distribuida (energia solar)."""
     data: dict[str, Any] = {
-        "periodo": _search(r"Período.*?(\w{3}/\d{4})", text, re.S),
+        "periodo": _search(r"Período.*?(\w{3}/\d{4})", text, re.DOTALL),
         # No cabecalho da GD a potencia usa ponto decimal (ex "5.00" = 5 kWp).
-        "potencia_kwp": (
+        "potencia_kwp": (  # noqa: PLC3002
             lambda v: float(v.replace(",", ".")) if v else None
         )(_search(r"\w{3}/\d{4}\s+(\d+[.,]\d{2})\s+\w+\s+GD", text)),
     }
